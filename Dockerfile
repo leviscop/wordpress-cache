@@ -6,6 +6,7 @@ RUN apk add --update \
     && rm -rf /var/cache/apk/*
 
 COPY webserver.service /
+COPY nginx.conf /etc/nginx/
 RUN chmod +x /webserver.service
 
 EXPOSE 80/tcp
